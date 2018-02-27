@@ -38,13 +38,13 @@ public class Game{
          
             case 2:
                System.out.println("_________________________________________________");
-               menuPrompt2();
+               menuPromptRabbit();
                System.out.println("\n5: Back");
                break;
          
             case 3:
                System.out.println("_________________________________________________");
-               menuPrompt4();
+               menuPromptSnake();
                System.out.println("\n5: Back");
                break;
          
@@ -69,40 +69,40 @@ public class Game{
                System.out.println("_________________________________________________");
                System.out.println("Changed");
                rabbit1.setRabbit("Johanne", "Snowshoe Hare", "Red", "Female", 2);
-               menuPrompt3();
+               menuPromptRabbit2();
                break;
          
             case 7:
                System.out.println("_________________________________________________");
                System.out.println("Changed");
                rabbit1.setRabbit("Jacky", "American", "Blue", "Male", 1);
-               menuPrompt3();
+               menuPromptRabbit2();
                break;
          
             case 8:
                System.out.println("_________________________________________________");
                rabbit1.printRabbitInfo();
-               menuPrompt3();
+               menuPromptRabbit2();
                break;
          
             case 9:
                System.out.println("_________________________________________________");
                System.out.println("Changed");
                snake1.setSnake("Sofie", "Cobra", "Brown", "Female", 3);
-               menuPrompt5();
+               menuPromptSnake2();
                break;
          
             case 10:
                System.out.println("_________________________________________________");
                System.out.println("Changed");
                snake1.setSnake("Jonny", "Anaconda", "Black", "Male", 4);
-               menuPrompt5();
+               menuPromptSnake2();
                break;
          
             case 11:
                System.out.println("_________________________________________________");
                snake1.printSnakeInfo();
-               menuPrompt5();
+               menuPromptSnake2();
                break;
          
             case 0:
@@ -135,7 +135,6 @@ public class Game{
    
       do
       {
-      //menuPrompt();
          choice = input.nextInt();
          switch(choice)
          {
@@ -234,24 +233,23 @@ public class Game{
                System.out.println("WTF ARE YOU DOING?!?!?\n5: GO BACK!");
          }
         
-      }while(choice !=0);     //while (!console input.hasNext("")){system.out.println(); input.next();
+      }while(choice !=0);
     
    }
-
     
-   private static void menuPrompt()
-   {
-      //System.out.println("\n1: Rabbit");
-      //System.out.println("2: Snake");
-      //System.out.println("3: Learn the mening of life");
-      System.out.println("1: Start over");
-      //System.out.println("5: Menu");
-      System.out.println("0: Close Game");
-      
-   }
+   
       
       
       //Her er alle vores Menuer
+      
+   private static void menuPrompt()
+   {
+      System.out.println("1: Start over");
+      System.out.println("0: Close Game");
+   }
+      
+      
+      
    private static void menuPrompt1()
    {
       System.out.println("\n1: Start game");
@@ -259,12 +257,9 @@ public class Game{
       System.out.println("3: Snake");
       System.out.println("4: Rules");
       System.out.println("0: Close game");
-      //System.out.println("6: Change Rabbit");
-      //System.out.println("4: Start over");
-      //System.out.println("5: Menu");
    }
 
-   private static void menuPrompt2()
+   private static void menuPromptRabbit()
    {
       System.out.println("Change Rabbit");
       System.out.println("6: Female");
@@ -272,7 +267,7 @@ public class Game{
       System.out.println("8: View Rabbit");
    }
       
-   private static void menuPrompt3()
+   private static void menuPromptRabbit2()
    {
       System.out.println("6: Female");
       System.out.println("7: Male"); 
@@ -280,7 +275,7 @@ public class Game{
       System.out.println("\n5: Back");
    }
       
-   private static void menuPrompt4()
+   private static void menuPromptSnake()
    {
       System.out.println("Change Snake");
       System.out.println("9: Female");
@@ -288,7 +283,7 @@ public class Game{
       System.out.println("11: View Snake");
    }
       
-   private static void menuPrompt5()
+   private static void menuPromptSnake2()
    {
       System.out.println("9: Female");
       System.out.println("10: Male"); 
